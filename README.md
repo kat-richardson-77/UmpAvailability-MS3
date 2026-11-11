@@ -111,6 +111,7 @@ CREATE TABLE if not exists umpires (
 	area VARCHAR(50) NOT NULL,
 	city VARCHAR(50) NOT NULL
 )
+
 CREATE TABLE IF NOT EXISTS matches(
 	id SERIAL PRIMARY KEY,
 	match_date DATE NOT NULL,
@@ -121,6 +122,7 @@ CREATE TABLE IF NOT EXISTS matches(
 	home_team VARCHAR(50) NOT NULL,
 	cancelled BOOLEAN
 	)
+	
 CREATE TABLE IF NOT EXISTS confirmation(
 	id INT FOREIGN KEY,
 	match_date DATE NOT NULL,
