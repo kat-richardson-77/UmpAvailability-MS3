@@ -49,30 +49,30 @@ ERD - Conceptual, Logical, Physical
 
 
 ### Database Process:
+
 #### Database Structure:
+clubmambers
+umpires
+matches
+confirmation
 
-ClubMembers
-Umpires
-Matches
-Confirmation
+.clubmembers:
+enid INT PRIMARY KEY
+first_name VARCHAR(50)
+surname VARCHAR(50)
+club VARCHAR(75)
+area VARCHAR(50)
+city VARCHAR(50)
 
-ClubMembers:
-ENID INT PRIMARY KEY
-Club VARCHAR
-firstname VARCHAR
-surname VARCHAR
-area VARCHAR
-city VARCHAR
+.umpires:
+enid INT PRIMARY KEY
+first_name VARCHAR(50)
+surname VARCHAR(50)
+award BOOLEAN
+area VARCHAR(50)
+city VARCHAR(50)
 
-Umpires:
-ENID INT PRIMARY KEY
-firstname VARCHAR
-surname VARCHAR
-area VARCHAR
-city VARCHAR
-award VARCHAR
-
-Matches:
+.matches:
 date DATE
 time TIME
 area VARCHAR
@@ -82,16 +82,16 @@ requesterid INT FOREIGN KEY
 hometeam VARCHAR 
 cancelled BOOLEAN
 
-Confirmation:
-date DATE
-time TIME
-venue VARCHAR
-hometeam VARCHAR
-umpireID INT
-umpireName VARCHAR
-requesterID INT FOREIGN KEY
-confirmed Boolean
-cancelled Boolean
+.confirmation:
+id INT FOREIGN KEY
+match_date DATE
+match_time TIME
+venue VARCHAR(50)
+home_team VARCHAR(50)
+umpire_id INT
+umpire_mame VARCHAR(50)
+cancelled
+confirmed
 
 ### SQL QUERY TO CREATE TABLES:
 CREATE TABLE IF NOT EXISTS clubmembers(
