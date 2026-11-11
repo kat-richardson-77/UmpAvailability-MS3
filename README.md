@@ -79,6 +79,7 @@ area VARCHAR
 city VARCHAR
 venue VARCHAR
 requesterid INT FOREIGN KEY
+club VARCHAR
 hometeam VARCHAR 
 cancelled BOOLEAN
 
@@ -119,12 +120,13 @@ CREATE TABLE IF NOT EXISTS matches(
 	area VARCHAR(50) NOT NULL,
 	city VARCHAR(50) NOT NULL,
 	venue VARCHAR(150) NOT NULL,
+	club VARCHAR(50) NOT NULL,
 	home_team VARCHAR(50) NOT NULL,
 	cancelled BOOLEAN
 	)
-	
+
 CREATE TABLE IF NOT EXISTS confirmation(
-	id INT FOREIGN KEY,
+	id INT REFERENCES matches,
 	match_date DATE NOT NULL,
 	match_time TIME NOT NULL,
 	venue VARCHAR(50) NOT NULL,
