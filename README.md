@@ -56,7 +56,7 @@ umpires
 matches
 confirmation
 
-.clubmembers:
+* clubmembers:
 enid INT PRIMARY KEY
 first_name VARCHAR(50)
 surname VARCHAR(50)
@@ -64,7 +64,7 @@ club VARCHAR(75)
 area VARCHAR(50)
 city VARCHAR(50)
 
-.umpires:
+* umpires:
 enid INT PRIMARY KEY
 first_name VARCHAR(50)
 surname VARCHAR(50)
@@ -72,7 +72,7 @@ award BOOLEAN
 area VARCHAR(50)
 city VARCHAR(50)
 
-.matches:
+* matches:
 date DATE
 time TIME
 area VARCHAR
@@ -82,7 +82,7 @@ requesterid INT FOREIGN KEY
 hometeam VARCHAR 
 cancelled BOOLEAN
 
-.confirmation:
+* confirmation:
 id INT FOREIGN KEY
 match_date DATE
 match_time TIME
@@ -148,6 +148,7 @@ CREATE TABLE IF NOT EXISTS confirmation(
 - GitHub
 - PostgreSQL
 - Python
+- Heruko
 
 #### Local Developement Set Up
 1. MS3 VS set up
@@ -172,5 +173,7 @@ CREATE TABLE IF NOT EXISTS confirmation(
 ### Credits
 - ERD diagrams were created using Lucid (https://lucid.app/) 
 - postgreSQL 
+- Python
+- Heruko
 - Free download of Netball court picture:(https://unsplash.com/photos/a-black-and-white-photo-of-a-basketball-court-IXFZANd1kxk)
 
