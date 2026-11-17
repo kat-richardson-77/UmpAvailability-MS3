@@ -8,7 +8,7 @@ def login():
 
 @auth.route('/logout')
 def logout():
-    return render_template("You have logged out")
+    return "You have logged out"
 
 @auth.route('/signup-club')
 def signup_club():
