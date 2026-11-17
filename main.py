@@ -1,15 +1,7 @@
-import psycopg2
+from WebApp import create_app
 
-conn = psycopg2.connect(
-    host="localhost",
-    database='umpavailability',
-    user='postgres',
-    password='catykins1977!',
-    port='5432'
-)
+app = create_app()
 
-cursor = conn.cursor()
+if __name__ == '__main__':
+    app.run(debug=True)
 
-postgresql_query = "SELECT * FROM umpires"
-cursor.execute(postgresql_query)
-print(cursor.fetchall())
