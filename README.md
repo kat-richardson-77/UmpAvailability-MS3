@@ -1,7 +1,7 @@
 # UmpAvailability-MS3
 Continuation of work on the MS3 to complete
 
-## Introduction/Description
+## Introduction
 The purpose of this app is allow teams to find available umpires in the area to attend matches The Umpires will be able to browse a list of matches that require an umpire and see the date, time and physical location of the match.
 
 ## Project Overview
@@ -68,7 +68,7 @@ city VARCHAR(50)
 enid INT PRIMARY KEY
 first_name VARCHAR(50)
 surname VARCHAR(50)
-award BOOLEAN
+award VARCHAR(1)
 area VARCHAR(50)
 city VARCHAR(50)
 
@@ -91,8 +91,8 @@ venue VARCHAR(50)
 home_team VARCHAR(50)
 umpire_id INT
 umpire_mame VARCHAR(50)
-cancelled
-confirmed
+cancelled BOOLEAN
+confirmed BOOLEAN
 
 ### SQL QUERY TO CREATE TABLES:
 CREATE TABLE IF NOT EXISTS clubmembers(
@@ -101,7 +101,8 @@ CREATE TABLE IF NOT EXISTS clubmembers(
 	surname VARCHAR(50) NOT NULL,
 	club VARCHAR(75) NOT NULL,
 	area VARCHAR(50) NOT NULL,
-	city VARCHAR(50) NOT NULL
+	city VARCHAR(50) NOT NULL,
+    password VARCHAR (12) NOT NULL
 )
 
 CREATE TABLE if not exists umpires (
@@ -110,7 +111,8 @@ CREATE TABLE if not exists umpires (
 	surname VARCHAR(50) NOT NULL,
 	award BOOLEAN NOT NULL,
 	area VARCHAR(50) NOT NULL,
-	city VARCHAR(50) NOT NULL
+	city VARCHAR(50) NOT NULL,
+    password VARCHAR (12) NOT NULL
 )
 
 CREATE TABLE IF NOT EXISTS matches(
@@ -136,6 +138,18 @@ CREATE TABLE IF NOT EXISTS confirmation(
 	cancelled BOOLEAN,
 	confirmed BOOLEAN
 )
+
+#### SQL Queries to Database:
+##### Login page
+    - SELECT * FROM clubmembers, umpires where enid=enid and surname=surname and password=password
+##### signup clubs page
+    - INSERT INTO clubmembers(enid, first_name, surname, club, area, city password) VALUES (?, '?', '?', '?', '?', '?', '?');
+##### signup umpires page
+    - INSERT INTO umpires(enid, first_name, surname, award, area, city, password) VALUES (?, '?', '?', '?', '?', '?', '?');
+##### create matches page
+    - INSERT INTO umpires(enid, first_name, surname, award, area, city) VALUES (?, '?', '?', '?', '?', '?');
+##### view matches page
+    - SELECT * FROM Matches WHERE club=(club) and city=(city) and date=(date)
 
 #### Features
 - Current Features
@@ -166,6 +180,7 @@ CREATE TABLE IF NOT EXISTS confirmation(
     * Visual Studio
         * installed Python
         * Installed Django
+        * Installed Flask
         * Installed venv
         * Installed PostgreSQL
 
@@ -177,6 +192,7 @@ CREATE TABLE IF NOT EXISTS confirmation(
 ### Credits
 - ERD diagrams were created using Lucid (https://lucid.app/) 
 - postgreSQL 
+- flask
 - Python
 - Heruko
 - Free download of Netball court picture:(https://unsplash.com/photos/a-black-and-white-photo-of-a-basketball-court-IXFZANd1kxk)

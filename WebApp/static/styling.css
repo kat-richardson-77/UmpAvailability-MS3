@@ -1,18 +1,18 @@
 /*Global Styles*/
     body {
-        background-color: rgb(37, 124, 135);
+        background-color: white;
     }
     h1 {
-        color: white;
+        color: darkgray;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     h3 {
-        color: white;
+        color: darkgray;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     h4 {
-        color: white;
+        color: darkgray;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bold;
     }
