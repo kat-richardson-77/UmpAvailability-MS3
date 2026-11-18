@@ -47,3 +47,10 @@ def signup_umpire():
         area = request.form.get('area')
         city = request.form.get('city')
     return render_template("signupumpire.html")
+
+@auth.route('/create-match', methods=['GET', 'POST'])
+def create_match():
+    if request.method == 'POST':
+        match_date = request.form.get('match_date')
+        match_time = request.form.get('match_time')
+    return render_template("creatematch.html")
