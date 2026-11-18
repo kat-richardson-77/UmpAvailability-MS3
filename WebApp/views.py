@@ -6,6 +6,6 @@ views = Blueprint('views', __name__)
 def homepage():
     return render_template("homepage.html")
 
-@views.route('/viewmatch')
+@views.route('/view-matches')
 def viewmatch():
     return render_template("viewmatch.html")
