@@ -18,4 +18,4 @@ INSTALLED_APPS = [
 ]
 
 DEBUG = False
-ALLOWED_HOSTS = ['.herukoapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com']
