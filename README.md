@@ -81,7 +81,7 @@ venue VARCHAR
 requesterid INT FOREIGN KEY
 club VARCHAR
 hometeam VARCHAR 
-cancelled BOOLEAN
+
 
 * confirmation:
 id INT FOREIGN KEY
@@ -123,8 +123,7 @@ CREATE TABLE IF NOT EXISTS matches(
 	city VARCHAR(50) NOT NULL,
 	venue VARCHAR(150) NOT NULL,
 	club VARCHAR(50) NOT NULL,
-	home_team VARCHAR(50) NOT NULL,
-	cancelled BOOLEAN
+	home_team VARCHAR(50) NOT NULL
 	)
 
 CREATE TABLE IF NOT EXISTS confirmation(
@@ -147,7 +146,7 @@ CREATE TABLE IF NOT EXISTS confirmation(
 ##### signup umpires page
     - INSERT INTO umpires(enid, first_name, surname, award, area, city, password) VALUES (?, '?', '?', '?', '?', '?', '?');
 ##### create matches page
-    - INSERT INTO umpires(enid, first_name, surname, award, area, city) VALUES (?, '?', '?', '?', '?', '?');
+    - INSERT INTO matches(match_date, match_time, venue, area, city, home_team, club) VALUES ('?', '?', '?', '?', '?', '?', '?');
 ##### view matches page
     - SELECT * FROM Matches WHERE club=(club) and city=(city) and date=(date)
 
@@ -156,7 +155,7 @@ CREATE TABLE IF NOT EXISTS confirmation(
     - Create a new user (club representative)
     - Create a new user (umpire)
     - Create a new match request
-    - Confirm avilability to umpire the match
+    - Confirm avilability to umpire the match as a pop up on the view matches page
     - Delete match request (if cancelled)
 - Future Features
     - Send popup message to all umpires in an area when a new match is available
@@ -192,8 +191,8 @@ CREATE TABLE IF NOT EXISTS confirmation(
 ### Credits
 - ERD diagrams were created using Lucid (https://lucid.app/) 
 - postgreSQL 
-- flask
+- Flask
 - Python
 - Heruko
 - Free download of Netball court picture:(https://unsplash.com/photos/a-black-and-white-photo-of-a-basketball-court-IXFZANd1kxk)
-
+- Bootstrap

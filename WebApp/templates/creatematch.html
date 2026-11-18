@@ -1,0 +1,39 @@
+{% extends "ms3main.html" %} {% block title %}Create a new Match Request{% endblock %}
+
+        {% block content %}
+
+        <h1 align="center">Create a new Match Request</h1>
+
+    <div class="form-group">
+        <label for="match_date">Match Date:</label>
+        <input type="text" class="form-control" id="match_date" name="match_date" placeholder="Enter match date" required>
+    </div>
+    <div class="form-group">
+        <label for="match_time">Match Time:</label>
+        <input type="text" class="form-control" id="match_time" name="match_time" placeholder="Enter match time" required>
+    </div>
+    <div class="form-group">
+        <label for="home_team">Home Team:</label>
+        <input type="text" class="form-control" id="home_team" name="home_team" placeholder="Enter home team name" required>
+    </div>
+    <div class="form-group">
+        <label for="club">Club:</label>
+        <input type="text" class="form-control" id="club" name="club" placeholder="Enter your club Name" required>
+    </div>
+    <div class="form-group">
+        <label for="area">Area:</label>
+        <input type="text" class="form-control" id="area" name="area" placeholder="Enter your Regional Area" required>
+    </div>
+    <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" class="form-control" id="city" name="city" placeholder="Enter your town/city" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
+ 
+        {% endblock %}
