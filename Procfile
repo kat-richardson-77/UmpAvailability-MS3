@@ -1,1 +1,1 @@
-web : gunicorn WebApp.wsgi
+web : gunicorn UmpAvilability-MS3.wsgi

@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS confirmation(
 - GitHub
 - PostgreSQL
 - Python
-- Heruko
+- Heroku
 
 #### Local Developement Set Up
 1. MS3 VS set up
