@@ -64,6 +64,7 @@ surname VARCHAR(50)
 club VARCHAR(75)
 area VARCHAR(50)
 city VARCHAR(50)
+password VARCHAR(12)
 
 * umpires:
 enid INT PRIMARY KEY
@@ -72,17 +73,17 @@ surname VARCHAR(50)
 award VARCHAR(1)
 area VARCHAR(50)
 city VARCHAR(50)
+password VARCHAR(12)
 
 * matches:
-date DATE
-time TIME
+match_date DATE
+match_time TIME
 area VARCHAR
 city VARCHAR
 venue VARCHAR
-requesterid INT FOREIGN KEY
+clubmember_id INT FOREIGN KEY
 club VARCHAR
 hometeam VARCHAR 
-
 
 * confirmation:
 id INT FOREIGN KEY
