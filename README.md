@@ -44,8 +44,9 @@ This app that will allow clubs to create a request for an umpire for a match or 
     * Acceptance Criteria: Ability to delete my user details
 
 ### Wire Frames
-to be added:
-ERD - Conceptual, Logical, Physical
+![Conceptual ERD]
+![Logical ERD]
+![Physical ERD]
 
 
 ### Database Process:
