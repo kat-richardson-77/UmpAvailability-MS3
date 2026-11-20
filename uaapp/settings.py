@@ -1,12 +1,11 @@
-# settings.py
-SECRET_KEY = 'MS3testingSecretKey'
-# Use SQLite database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'database.db',  # BASE_DIR is predefined in Django settings
-    }
-}
+import psycopg2
+conn = psycopg2.connect(host="localhost", dbname="postgres", user="postgres"
+                      password="catykins1977!", port=5432)
+
+cur = conn.cursor()
+
+# cur.execute("""SELECT * FROM clubmembers, umpires where enid=[] and surname=[] and password=[];""")
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
